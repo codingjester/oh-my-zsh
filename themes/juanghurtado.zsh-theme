@@ -15,6 +15,8 @@ GREEN_BOLD=$fg_bold[green]
 WHITE_BOLD=$fg_bold[white]
 BLUE_BOLD=$fg_bold[blue]
 RESET_COLOR=$reset_color
+PURPLE=$'%{\e[1;35m%}'
+LIGHT_BLUE=$'%{\e[1;36m%}'
 
 # Format for git_prompt_info()
 ZSH_THEME_GIT_PROMPT_PREFIX=""
@@ -41,6 +43,6 @@ ZSH_THEME_GIT_PROMPT_SHA_AFTER="%{$WHITE%}]"
 
 # Prompt format
 PROMPT='
-%{$GREEN_BOLD%}%n@%m%{$WHITE%}:%{$YELLOW%}%~%u$(parse_git_dirty)$(git_prompt_ahead)%{$RESET_COLOR%}
-%{$BLUE%}>%{$RESET_COLOR%} '
+%{$PURPLE%}%n%{$WHITE_BOLD%}@%{$LIGHT_BLUE%}%m%{$WHITE%}:%{$GREEN_BOLD%}%~ [%h | %j]%u$(parse_git_dirty)$(git_prompt_ahead)%{$RESET_COLOR%}
+%{$GREEN_BOLD%}>>%{$RESET_COLOR%} '
 RPROMPT='%{$GREEN_BOLD%}$(current_branch)$(git_prompt_short_sha)$(git_prompt_status)%{$RESET_COLOR%}'
