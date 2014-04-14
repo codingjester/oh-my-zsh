@@ -1,7 +1,4 @@
-# ------------------------------------------------------------------------
-# Juan G. Hurtado oh-my-zsh theme
-# (Needs Git plugin for current_branch method)
-# ------------------------------------------------------------------------
+# Needs Git plugin for current_branch method
 
 # Color shortcuts
 RED=$fg[red]
@@ -38,11 +35,11 @@ ZSH_THEME_GIT_PROMPT_UNTRACKED=" %{$WHITE%}untracked"
 ZSH_THEME_GIT_PROMPT_AHEAD=" %{$RED%}(!)"
 
 # Format for git_prompt_long_sha() and git_prompt_short_sha()
-ZSH_THEME_GIT_PROMPT_SHA_BEFORE=" %{$WHITE%}[%{$YELLOW%}"
+ZSH_THEME_GIT_PROMPT_SHA_BEFORE=" %{$WHITE%}[%{$GREEN%}"
 ZSH_THEME_GIT_PROMPT_SHA_AFTER="%{$WHITE%}]"
 
 # Prompt format
 PROMPT='
-%{$PURPLE%}%n%{$WHITE_BOLD%}@%{$LIGHT_BLUE%}%m%{$WHITE%}:%{$GREEN_BOLD%}%~ [%h | %j]%u$(parse_git_dirty)$(git_prompt_ahead)%{$RESET_COLOR%}
-%{$GREEN_BOLD%}>>%{$RESET_COLOR%} '
-RPROMPT='%{$GREEN_BOLD%}$(current_branch)$(git_prompt_short_sha)$(git_prompt_status)%{$RESET_COLOR%}'
+%{$GREEN_BOLD%}%n@%m%{$WHITE%}:%{$YELLOW%}%~%u$(parse_git_dirty)$(git_prompt_ahead)%{$RESET_COLOR%}
+%{$BLUE%}>%{$RESET_COLOR%} '
+RPROMPT='%{$YELLOW%}$(current_branch)$(git_prompt_short_sha)$(git_prompt_status)%{$RESET_COLOR%}'
